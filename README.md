@@ -7,8 +7,10 @@ social links are dead
 
 Projects page isnt set up for work history, find way to incorporate
 
-Add pre-gulp source files and update read me to explain build process. 
+done--Add pre-gulp source files and update read me to explain build process. 
 
 comment code in pregulp files
 
 pull master and update html files in source
+
+outdated ip?-site still functions
