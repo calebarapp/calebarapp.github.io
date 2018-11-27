@@ -1,0 +1,1 @@
+Write all code in src files. gulp pipes to assets after prefixing, running sass, babel. ect

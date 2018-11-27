@@ -1,0 +1,155 @@
+//======================================================
+//GLOBAL------------------------------------------------
+//======================================================
+
+/*--------------------navigation-----------------------*/
+
+.nav-row {
+    @include nav-item-row;
+   }
+  
+  .dropdown__button {
+    @include social-links__item;
+    padding: .3em;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 6;
+  }
+  
+  .dropdown__button:hover {
+    cursor: pointer;
+  }
+  
+     
+  .dropdown {
+    overflow: hidden;
+  }
+
+  .dropdown__menu {
+    transform: translateX(500px);
+    right:0;
+    top:0;
+    position: fixed;
+    height: 100vh;
+    width: 320px;
+    z-index:5;
+    display:flex;
+    flex-direction: column;
+    transition: .6s cubic-bezier(.43,.52,.22,1);
+    box-shadow: -8px 0 15px 10px rgba(60,60,60, 0.05);
+
+    li{ 
+      flex: 1;
+    }
+  }
+  
+//-End-Navigation---------------------------------------
+
+//-Footer---------------------------------------------
+
+.social-links { 
+    float:left;
+    display:flex;
+    flex-direction: row;
+    width: 30%;
+    color:white; 
+    
+    a {
+        cursor: pointer; 
+        font-size: 2em;
+        margin: 1em;
+    }
+}
+
+//-End-Footer-----------------------------------------
+
+//======================================================
+// END-GLOBAL-------------------------------------------
+//======================================================
+
+
+//=====================================================
+//HOME PAGE -------------------------------------------
+//=====================================================
+
+.landing-container { 
+  width: 70%;
+  padding: 10em 0 12em 0;
+  margin: 0 auto 0 auto;
+}
+//=====================================================
+//End HOME PAGE ---------------------------------------
+//=====================================================
+
+//=====================================================
+//ABOUT PAGE ------------------------------------------
+//=====================================================
+
+.about { 
+  background-color: white;
+  padding: 1em;
+  overflow-x: hidden;
+}
+
+.about__text-container { 
+  width: 50%;
+  margin: 4em auto 5em auto;
+}
+
+.about__social { 
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+//=====================================================
+//END ABOUT PAGE --------------------------------------
+//=====================================================
+
+//=====================================================
+//PROJECTS PAGE -----------------------------------
+//=====================================================
+
+.projects__container { 
+  width: 80%;
+  margin: 0 auto;
+}
+
+//=====================================================
+//END PROJECTS PAGE------------------------------------
+//=====================================================
+
+//=====================================================
+//Media breaks-----------------------------------------
+//=====================================================
+
+@media (max-width: 60em) { 
+  .about__text-container { 
+    width: 100%;
+  }
+  .landing-container { 
+    width: 100%;
+  }
+  .projects__container { 
+    width: 100%;
+  }
+  .dropdown__menu { 
+    transform: translateX(1000px);
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+  //animations -------------------------------------
+ 
+  .dropdown__button--triggered {
+    padding: .3em .4em .3em 0em;
+    }
+
+  .dropdown__menu--triggered {
+    transform:none;
+    transition: .5s cubic-bezier(.43,.52,.22,1);
+    }
