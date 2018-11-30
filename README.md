@@ -1,16 +1,4 @@
-# calebarapp.github.io
-
-TO DO: 
-social links are dead
-
-"About" verbage could still use work
-
-Projects page isnt set up for work history, find way to incorporate
-
-done--Add pre-gulp source files and update read me to explain build process. 
-
-comment code in pregulp files
-
-pull master and update html files in source
-
-outdated ip?-site still functions
+# calebarapp.com | My Portfolio
+This is my portfolio site.
+I tried to keep things as miniamlist as possible.
+I focused on stark contrasts and empty space for the layout. In later updates I will be reworking the experience section to allow for proffessional history. 
