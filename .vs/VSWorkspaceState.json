@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\html"
+    "\\css",
+    "\\html",
+    "\\js"
   ],
-  "SelectedNode": "\\src\\html\\projects.html",
+  "SelectedNode": "\\.DS_Store",
   "PreviewInSolutionExplorer": false
 }
