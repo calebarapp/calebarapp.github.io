@@ -270,19 +270,6 @@
         width: 80%;
         text-align: left;
     }
-
-    a {
-        @include button;
-        width: 300px;
-        border-radius: 3px;
-        margin: 3em auto 4em auto;
-        cursor: pointer;
-    }
-
-    a:hover {
-        background-color: black;
-        color: white;
-    }
 }
 
 .top {
@@ -290,6 +277,80 @@
     margin: 5em auto 0 auto;
 }
 
-//=====================================================
-//END PROJECTS PAGE --------------------------------------
-//=====================================================
+.projects__button { 
+    @include button;
+    cursor:pointer;
+}
+
+.projects__button:hover { 
+    background: black;
+    color: white;
+}
+
+.dropdown-container {
+    margin: 3em auto 0 auto;
+    width: 300px;
+}
+/*drop down items===================================================*/
+.dropdown-item {
+    border-radius: 3px;
+    padding: 8px;
+    font-family: $primary-font;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 0 auto;
+    transition: .3s;
+}
+.dropdown-item:hover { 
+    transition: .3s;
+    background: black;
+    color:white;
+}
+.dropdown-top {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.dropdown-middle {
+    border-bottom: none;
+    border-top: none;
+    border-radius: 0;
+    transition: .3s;
+    display: none;
+}
+.dropdown-bottom {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: .3s;
+    display: none;
+}
+
+.dropdown-container:hover .dropdown-middle {
+    transition: .3s;
+    display: block;
+}
+
+.dropdown-container:hover .dropdown-bottom {
+    transition: .3s;
+    display: block;
+}
+
+/*==========================================================================
+Modal
+==========================================================================*/
+.modal-exit {
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin: 1em 1em 0 0;
+    cursor: pointer;
+}
+
+.modal-description {
+    @include body-text;
+    font-size: .5em;
+    width: 900px;
+    margin: 0 1.5em 0 1.5em;
+}

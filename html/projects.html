@@ -1,15 +1,16 @@
 ﻿<!doctype html>
 <html charset="utf-8">
 <head>
-  <link href=./../css/main.css rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:700|Work+Sans:100,300" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <title>Caleb Rapp | Projects</title>
-  <meta charset="utf-8">
-  <meta name="keywords" content="Generic, Web, Page">
-  <meta name="author" content="Caleb Rapp">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=./../css/main.css rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:700|Work+Sans:100,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Caleb Rapp | Projects</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Generic, Web, Page">
+    <meta name="author" content="Caleb Rapp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <nav class="nav-row">
@@ -42,7 +43,7 @@
                 My contributions in this project ranged from creating views, writing server-side controller script, 
                 manipulating views with Javascript, and database modeling.  
             </p>
-            <a>See Repository</a>
+            <a class="projects__button" id="modal">More...</a>
             <div class = "line"></div>
         </div>
         <div class = projects__container>
@@ -53,26 +54,84 @@
                 But most importantly, the skills of problem solving and self-education were impressed upon me. I was trained in discerning 
                 problems and finding solutions, a skill that translates into any technology. In addition to these core assets, I gained invaluable 
                 experience in C# and the DotNet Framework, and how these technologies interact with modern Javascript concepts like Knockout.js and Ajax. 
-
             </p>
-            <a>See Repositories</a>
+
+            <div class="dropdown-container">
+                <a class="dropdown-item dropdown-top" id="dropDownButton">See Repositories</a>
+                <div>
+                    <a class="dropdown-item dropdown-middle">DotNet and Knockout.js Project</a>
+                    <a class="dropdown-item dropdown-bottom">Crud Application </a>
+                </div>
+            </div>
+
             <div class = "line"></div>
         </div>
         <div class = projects__container>
             <!-- <div class = "line top"></div> -->
-            <h3>Previous Experience</h3>
+            <h3>Prior Experience</h3>
             <p>
                 I come from the experiential marketing industry where my primary role was graphic film installation.
                 I helped build retail displays, exhibitions, and events for major athletic wear companies, tech giants, and sports teams.
                 We translated design concepts into reality with the limited time and resources their environments afforded. In this industry,
-                details and solutions were paramount. Installing in pre-existing enviroments means every project has its unique and
-                unpredictable challenges to overcome. Strict deadlines, limited resources, and a team of peers made for a highly collabritive and dynamic production 
-                where ideas mattered more than seniority. This allowed me to gain more confidence in my own thought processs and follow through on my own solutions.  
+                details and solutions are paramount. Installing in pre-existing enviroments means every project has its unique and
+                unpredictable challenges to overcome. Working under strict deadlines with limited resources encouraged dynamic and collabrative productions.
+                These experiences strengthed my ability to quickly diagnose and implement solutions in continuously shifting enviroments.
             </p>
-            <a href="http://www.socialexprmnt.com">socialexprmnt.com</a>
+            <a href="http://www.socialexprmnt.com" class="projects__button">Social Experiment</a>
             <div class = "line"></div>
         </div>
     </section>
+
+    <div class="modal-container" id="modalContainer">
+        <img class ="modal-exit" id ="modalExit"src="https://img.icons8.com/ios/100/000000/delete-sign.png">
+        <div class="modal__img-container">
+            <img />
+        </div>
+        <div class="modal-nav">
+            <svg id="leftArrowBox" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 width="50" height="50"
+                 viewBox="0 0 224 224"
+                 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" 
+                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path>
+                <g  id ="leftArrow"  style ="fill:black;">
+                <g id="surface1"><path d="M88.76,58.66c-0.98,0.175 -1.855,0.665 -2.52,1.4l-48.86,48.72l-3.08,
+                3.22l3.08,3.22l48.86,48.72c1.085,1.33 2.8175,1.9425 4.4975,1.5575c1.6625,-0.385 2.975,-1.6975 3.36,-3.36c0.385,
+                -1.68 -0.2275,-3.4125 -1.5575,-4.4975l-41.16,-41.16h132.3c1.61,0.0175 3.115,-0.8225 3.9375,-2.2225c0.805,-1.4 0.805,
+                -3.115 0,-4.515c-0.8225,-1.4 -2.3275,-2.24 -3.9375,-2.2225h-132.3l41.16,-41.16c1.4525,-1.3475 1.8375,-3.4825 0.9625,
+                -5.25c-0.8575,-1.785 -2.8,-2.765 -4.7425,-2.45z">
+                </path></g></g></g></svg>
+
+            <p class="modal-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <svg id = "rightArrowBox" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 width="50" height="50"
+                 viewBox="0 0 224 224"
+                 style=" fill:#000000;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                   stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                   font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                   style="mix-blend-mode: normal">
+                    <path d="M0,224v-224h224v224z" fill="none">
+                    </path>
+                    <g id="rightArrow" style = "fill: black;"><g id="surface1"><path d="M133.7,58.66c-1.68,
+                    0.2975 -3.0275,1.5225 -3.5,3.15c-0.4725,1.645 0.0175,3.395 1.26,4.55l41.16,41.16h-132.3c-0.14,
+                    0 -0.28,0 -0.42,0c-2.4675,0.1225 -4.3925,2.2225 -4.27,4.69c0.1225,2.4675 2.2225,4.3925 4.69,4.27h132.3l-41.16,
+                    41.16c-1.33,1.085 -1.9425,2.8175 -1.5575,4.4975c0.385,1.6625 1.6975,2.975 3.36,3.36c1.68,0.385 3.4125,-0.2275 4.4975,
+                    -1.5575l48.86,-48.72l3.08,-3.22l-3.08,-3.22l-48.86,-48.72c-0.9275,-0.9975 -2.275,-1.505 -3.64,-1.4c-0.14,0 -0.28,0 -0.42,
+                    0z"></path></g></g>
+                </g>
+            </svg>
+
+        </div>
+    </div>
+
+
     <footer class = "footer__homepage-container">
         <ul class = "social-links"> 
             <li><a href="https://www.linkedin.com/in/calebarapp/"><i class="fab fa-linkedin-in"></i></a></li>
