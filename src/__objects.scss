@@ -196,20 +196,6 @@
     align-items:center;
 }
 
-.modal-nav svg { 
-    border-radius: 3px;
-    border: 1px solid black;
-    cursor:pointer;
-}
 .modal-nav svg:hover { 
     background-color: black;
-}
-
-
-.modal-nav__img {
-    border-radius: 3px;
-    margin: 1em;
-    background-color: grey;
-    width: 140px;
-    height: 100px;
 }

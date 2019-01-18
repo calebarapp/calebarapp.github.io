@@ -53,21 +53,6 @@ window.onload = function menu() {
 }
 //End navigation-------------------------------------------------------------------------------
 
-//projects dropdown----------------------------------------------------------------------------
-//document.getElementById("dropDownBox").addEventListener("mouseover", function () {
-//    console.log('test');
-//    document.getElementById("dropDownButton").classList.add("projects__dropdown--active");
-//    let dropdownList = document.getElementsByClassName("projects__dropdown-item");
-//    for (let x = 0; x < dropdownList.length; x++) {
-//        dropdownList[x].classList.add("projects__dropdown-item--active");
-//    }
-//});
-
-//document.getElementById("dropDownBox").addEventListener("mouseout", function () {
-//    document.getElementById("dropDownButton").classList.remove("projects__dropdown--active");
-    
-//})
-
 //Modal----------------------------------------------------------------------------------------
 
 document.getElementById("rightArrowBox").addEventListener("mouseover", function () {
@@ -98,4 +83,54 @@ document.getElementById("modalExit").addEventListener('click', function () {
 
 document.getElementById("modal").addEventListener('click', function () {
     document.getElementById("modalContainer").style.display = "block";
+    //sets modal to first content object
+    document.getElementById("modalDescription").innerHTML = contentArr[contentIndex].description;
 });
+
+//Modal content-----------------------------------------------------------
+let contentIndex = 0;
+document.getElementById("modal").addEventListener("load", function () {
+})
+
+document.getElementById("leftArrowBox").addEventListener("click", function () {
+    if (contentIndex == 0) {
+        contentIndex = 2;
+    } else {
+        contentIndex--
+    }
+    document.getElementById("modalDescription").innerHTML = contentArr[contentIndex].description;
+
+})
+
+document.getElementById("rightArrowBox").addEventListener("click", function () {
+    if (contentIndex == 2) {
+        contentIndex = 0;
+    } else {
+        contentIndex++
+    }
+    document.getElementById("modalDescription").innerHTML = contentArr[contentIndex].description;
+})
+
+
+let message = {
+    img: null,
+    description: `Implementation of a user messaging system. To achieve this I altered 
+    the existing Entity model to store a list of recipients as a Json string.
+    The controller method performs a query of all messages and checks if your name is on the recipient list.
+    A list of all of your messages is then passed to the view and presented to the user.`
+    };
+let calendar = {
+    img: null,
+    description: `Implementation of a calendar interface using FullCalender.js that displays Work
+    days in a work schedule. To do this I queried the database for the schedule and passed those models
+    to the view. I then used javascript to parse the models and populate the calendar.`
+};
+
+let login = {
+    img: null,
+    description: `Utilization of MVC's Authentication Scaffolding to add login functionality to The Home View.
+This required me to seperate the relevant controllers from MVC's Authentication scaffold and modify them 
+to work with our existing home page. I then adapted our Home view to be compatible with the new controllers.`
+};
+
+let contentArr = [message, calendar, login];

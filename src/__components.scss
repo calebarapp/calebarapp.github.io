@@ -348,6 +348,13 @@ Modal
     cursor: pointer;
 }
 
+//nav arrows
+.modal-nav svg {
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
 .modal-description {
     @include body-text;
     font-size: .5em;
