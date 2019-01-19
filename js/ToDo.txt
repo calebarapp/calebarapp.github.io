@@ -1,0 +1,4 @@
+1. fix dropdown on projects page. border radius on bottom no long appears on mouseout. (high)
+2. get extra message img. (high)
+3. see about making drop downs absolute positioned so that it doesnt affect layout, its cumbersome (low)
+4. Fix project dropdown to have 3 list items.

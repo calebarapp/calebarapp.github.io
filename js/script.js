@@ -50,13 +50,17 @@ window.onload = function menu() {
 
     disableSelect(document.getElementById('dropdownMenu'));
     disableSelect(document.getElementById('dropdownButton'));
+
+    disableSelect(document.getElementById('leftArrowBox'));
+    disableSelect(document.getElementById('rightArrowBox'));
+    disableSelect(document.getElementById('exitModal'));
+
 }
 //End navigation-------------------------------------------------------------------------------
 
-//Modal----------------------------------------------------------------------------------------
+//Modal navigation----------------------------------------------------------------------------------------
 
 document.getElementById("rightArrowBox").addEventListener("mouseover", function () {
-    console.log("test");
     document.getElementById("rightArrow").style.fill= "white";
 })
 
@@ -81,56 +85,69 @@ document.getElementById("modalExit").addEventListener('click', function () {
     document.getElementById("modalContainer").style.display = "none";
 });
 
-document.getElementById("modal").addEventListener('click', function () {
+//modal dropdown select----------------------------------------------------
+
+document.getElementById("modalMessages").addEventListener('click', function () {
     document.getElementById("modalContainer").style.display = "block";
     //sets modal to first content object
-    document.getElementById("modalDescription").innerHTML = contentArr[contentIndex].description;
+    content.imgArr = message.imgArr;
+    content.description = message.description;
+    document.getElementById("modalDescription").innerHTML = content.description;
+    document.getElementById("modalImg").src = content.imgArr[contentIndex];
 });
 
+document.getElementById("modalCalendar").addEventListener('click', function () {
+    document.getElementById("modalContainer").style.display = "block";
+    //sets modal to first content object
+    content.imgArr = calendar.imgArr;
+    content.description = calendar.description;
+    document.getElementById("modalDescription").innerHTML = content.description;
+    document.getElementById("modalImg").src = content.imgArr[contentIndex];
+});
 //Modal content-----------------------------------------------------------
 let contentIndex = 0;
-document.getElementById("modal").addEventListener("load", function () {
-})
+
+let content = {
+    imgArr: [], 
+    description: ""
+};
 
 document.getElementById("leftArrowBox").addEventListener("click", function () {
     if (contentIndex == 0) {
-        contentIndex = 2;
+        contentIndex = (content.imgArr.length -1);
     } else {
         contentIndex--
     }
-    document.getElementById("modalDescription").innerHTML = contentArr[contentIndex].description;
-
+    document.getElementById("modalImg").src = content.imgArr[contentIndex];
 })
 
 document.getElementById("rightArrowBox").addEventListener("click", function () {
-    if (contentIndex == 2) {
+    if (contentIndex == (content.imgArr.length - 1)) {
         contentIndex = 0;
     } else {
         contentIndex++
     }
-    document.getElementById("modalDescription").innerHTML = contentArr[contentIndex].description;
+    document.getElementById("modalImg").src = content.imgArr[contentIndex];
 })
-
+//Modal=================================================================================
 
 let message = {
-    img: null,
+    imgArr: ["../img/messages-inbox.png","../img/MessagesView.png"],
     description: `Implementation of a user messaging system. To achieve this I altered 
     the existing Entity model to store a list of recipients as a Json string.
     The controller method performs a query of all messages and checks if your name is on the recipient list.
     A list of all of your messages is then passed to the view and presented to the user.`
     };
 let calendar = {
-    img: null,
+    imgArr: ["../img/Calendar-View.png", "../img/Calendar-Controller.png", "../img/Calendar-Js.png","../img/Calendar-Ui.png"] ,
     description: `Implementation of a calendar interface using FullCalender.js that displays Work
     days in a work schedule. To do this I queried the database for the schedule and passed those models
     to the view. I then used javascript to parse the models and populate the calendar.`
 };
 
 let login = {
-    img: null,
+    img: ["../img/Login-View.png","../img/Login.png"],
     description: `Utilization of MVC's Authentication Scaffolding to add login functionality to The Home View.
 This required me to seperate the relevant controllers from MVC's Authentication scaffold and modify them 
 to work with our existing home page. I then adapted our Home view to be compatible with the new controllers.`
 };
-
-let contentArr = [message, calendar, login];

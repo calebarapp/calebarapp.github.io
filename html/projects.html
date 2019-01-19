@@ -43,7 +43,13 @@
                 My contributions in this project ranged from creating views, writing server-side controller script, 
                 manipulating views with Javascript, and database modeling.  
             </p>
-            <a class="projects__button" id="modal">Contributions</a>
+            <div class="dropdown-container">
+                <a class="dropdown-item dropdown-top">Contributions </a>
+                <div>
+                    <a class="dropdown-item dropdown-middle" id="modalMessages">Messaging</a>
+                    <a class="dropdown-item dropdown-bottom" id="modalCalendar">Schedule Display</a>
+                </div>
+            </div>
             <div class = "line"></div>
         </div>
         <div class = projects__container>
@@ -81,11 +87,11 @@
             <div class = "line"></div>
         </div>
     </section>
-
+<!--Modal=====================================================================================================-->
     <div class="modal-container" id="modalContainer">
         <img class ="modal-exit" id ="modalExit"src="https://img.icons8.com/ios/100/000000/delete-sign.png">
         <div class="modal__img-container">
-            <img />
+            <img id="modalImg" src=""">
         </div>
         <div class="modal-nav">
             <svg id="leftArrowBox" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
