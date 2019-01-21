@@ -293,6 +293,8 @@
 }
 /*drop down items===================================================*/
 .dropdown-item {
+    text-decoration:none;
+    color:black;
     border-radius: 3px;
     padding: 8px;
     font-family: $primary-font;
@@ -308,10 +310,7 @@
     background: black;
     color:white;
 }
-.dropdown-top {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
+
 
 .dropdown-middle {
     border-bottom: none;
@@ -327,12 +326,21 @@
     display: none;
 }
 
-.dropdown-container:hover .dropdown-middle {
+.dropdown-top--activated {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.dropdown-middle--activated {
     transition: .3s;
     display: block;
 }
 
-.dropdown-container:hover .dropdown-bottom {
+.dropdown-middle--activated:nth-of-type(2) { 
+    border-top: 1px solid black;
+}
+
+.dropdown-bottom--activated {
     transition: .3s;
     display: block;
 }
@@ -353,11 +361,22 @@ Modal
     border-radius: 3px;
     border: 1px solid black;
     cursor: pointer;
+    margin: .3em;
+}
+
+.modal-label {
+    margin: 0 auto;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    margin:.5em 0 2em 0;
 }
 
 .modal-description {
     @include body-text;
+    text-align: left;
     font-size: .5em;
-    width: 900px;
+    width: 98%;
     margin: 0 1.5em 0 1.5em;
 }
