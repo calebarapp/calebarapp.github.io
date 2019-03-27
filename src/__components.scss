@@ -3,6 +3,7 @@
 //======================================================
 
 //--Drop Down Button----------------------------------------------
+// fix following to BEM spec later.
 .dropdown__button--top {
     @include dropdown-button-line;
     padding: 1px 0px 1px 18px;
@@ -103,12 +104,16 @@
     cursor: pointer;
 }
 
-//End-Footer------------------------------------------------------
+//End-Footer-----------------------------------------------------
 
 //======================================================
-//END-GLOBAL------------------------------------------------
+//END-GLOBAL
 //======================================================
 
+
+//=====================================================
+//End HOME PAGE 
+//=====================================================
 .landing-container {
 
     h1 {
@@ -166,7 +171,7 @@
 .about__text-container {
 
     h3 {
-        margin: 1em auto 0em auto;
+        margin: 0em auto 0em auto;
         font-size: 4em;
         @include heading;
     }
@@ -224,7 +229,7 @@
     height: 1px;
     width: 70px;
     display: block;
-    margin: 2em auto 4em auto;
+    margin: 2em auto 2em auto;
     background-color: black;
 }
 
@@ -233,7 +238,7 @@
 //=====================================================
 
 //=====================================================
-//PROJECTS PAGE --------------------------------------
+//experience PAGE --------------------------------------
 //=====================================================
 
 .projects {
@@ -274,7 +279,7 @@
 
 .top {
     //for top line in projects
-    margin: 5em auto 0 auto;
+    margin: 0em auto 0 auto;
 }
 
 .projects__button { 
@@ -291,17 +296,21 @@
     margin: 3em auto 0 auto;
     width: 300px;
 }
+
 /*drop down items===================================================*/
 .dropdown-item {
     border-radius: 3px;
     padding: 8px;
+    width: 300px;
     font-family: $primary-font;
     text-align: center;
     display: block;
     cursor: pointer;
     border: 1px solid black;
-    margin: 0 auto;
     transition: .3s;
+    background-color: white;
+    text-decoration: none;
+    color:black;
 }
 .dropdown-item:hover { 
     transition: .3s;
@@ -309,8 +318,7 @@
     color:white;
 }
 .dropdown-top {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 3px;
 }
 
 .dropdown-middle {
@@ -320,6 +328,7 @@
     transition: .3s;
     display: none;
 }
+
 .dropdown-bottom {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -335,6 +344,15 @@
 .dropdown-container:hover .dropdown-bottom {
     transition: .3s;
     display: block;
+}
+
+.dropdown-container:hover .dropdown-top { 
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.projects__dropdown-top {
+    border-bottom: 1px solid black;
 }
 
 /*==========================================================================
