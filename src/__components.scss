@@ -282,12 +282,12 @@
     margin: 0em auto 0 auto;
 }
 
-.projects__button { 
+.socExp { 
     @include button;
     cursor:pointer;
 }
 
-.projects__button:hover { 
+.socExp:hover { 
     background: black;
     color: white;
 }
@@ -298,7 +298,7 @@
 }
 
 /*drop down items===================================================*/
-.dropdown-item {
+.button-dropdown__item {
     text-decoration:none;
     color:black;
     border-radius: 3px;
@@ -314,90 +314,48 @@
     text-decoration: none;
     color:black;
 }
-.dropdown-item:hover { 
+.button-dropdown__item:hover { 
     transition: .3s;
     background: black;
     color:white;
 }
-.dropdown-top {
+
+.button-dropdown__item-top {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     border-radius: 3px;
 }
 
-.dropdown-middle {
+.button-dropdown__item-middle--top {
+    border-top: none;
+    transition: .3s;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+
+}
+
+.button-dropdown__item-middle {
     border-bottom: none;
     border-top: none;
     border-radius: 0;
     transition: .3s;
-    display: none;
 }
 
-.dropdown-bottom {
+.button-dropdown__item-bottom {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     transition: .3s;
-    display: none;
 }
 
-.dropdown-top--activated {
+.button-dropdown__item-top--activated {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-.dropdown-middle--activated {
-    transition: .3s;
-    display: block;
-}
-
-.dropdown-middle--activated:nth-of-type(2) { 
+.button-dropdown__middle:nth-of-type(2) { 
     border-top: 1px solid black;
 }
 
-.dropdown-bottom--activated {
-    transition: .3s;
-    display: block;
-}
-
-.dropdown-container:hover .dropdown-top { 
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.projects__dropdown-top {
+#projectDropdownTop {
     border-bottom: 1px solid black;
-}
-
-/*==========================================================================
-Modal
-==========================================================================*/
-.modal-exit {
-    width: 18px;
-    height: 18px;
-    float: right;
-    margin: 1em 1em 0 0;
-    cursor: pointer;
-}
-
-//nav arrows
-.modal-nav svg {
-    border-radius: 3px;
-    border: 1px solid black;
-    cursor: pointer;
-    margin: .3em;
-}
-
-.modal-label {
-    margin: 0 auto;
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif ;
-    font-size: .8em;
-    font-weight: 600;
-    margin:.5em 0 2em 0;
-}
-
-.modal-description {
-    @include body-text;
-    text-align: left;
-    font-size: .5em;
-    width: 98%;
-    margin: 0 1.5em 0 1.5em;
 }

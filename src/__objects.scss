@@ -113,13 +113,19 @@
 //PROJECTS PAGE -----------------------------------
 //=====================================================
 
-.dropdown__container {
+.button-dropdown__container {
+	display: none;
 	position: absolute;	
 }
 
-.dropdown {
+
+.button-dropdown__container--active { 
+    display: block;
+}
+
+.button-dropdown {
 	width:300px;
-	margin: 0 auto;
+	margin: 3em auto;
 }
 //=====================================================
 //END PROJECTS PAGE------------------------------------
@@ -160,53 +166,3 @@
 	transition: .5s cubic-bezier(.43,.52,.22,1);
 }
 
-
-//==========================================================
-//projects Page Modal
-//==========================================================
-
-.modal-container {
-    background-color: white;
-    z-index: 10;
-    position: fixed;
-    width: 95%;
-    height:99vh;
-    top: 0;
-    left: 0;
-    display: none;
-    box-shadow: 1px 0px 40px rgba(100,100,100,0.4);
-    margin: 0em auto;
-    left: 2.5%;
-    border-radius: 8px;
-    padding-bottom: 2em;
-}
-
-
-.modal__img-container {
-    bottom: 12em;
-    text-align: center;
-    width: 90%;
-    
-    left: 5%;
-    margin: 2em auto 0 auto;
-    img {
-        border-radius: 5px;
-        max-width: 90%;
-        max-height:380px;
-    }
-}
-.modal-nav { 
-    //position: absolute; 
-    bottom: 1em;
-    text-align: center;
-    width: 100%;
-    margin: 0em auto;
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    font-size: 2em;
-    align-items:center;
-}
-.modal-nav svg:hover { 
-    background-color: black;
-}
