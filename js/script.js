@@ -1,6 +1,6 @@
 //Navigation---------------------------------------------------------------------------------
+var isADropDownActive = false;
 window.onload = function menu() {
-
     function dropDown() {
         document.getElementById('dropdownMenu').classList.toggle("dropdown__menu--triggered");
         document.getElementById('dropdownButton').classList.toggle("dropdown__button--triggered");
